@@ -2,6 +2,7 @@
 
 use System\Classes\PluginBase;
 use Mja\Testimonials\Controllers\Testimonials as TestimonialsController;
+use Mja\Testimonials\Models\Testimonial as TestimonialModel;
 
 /**
  * PhotoTestimonials Plugin Information File
