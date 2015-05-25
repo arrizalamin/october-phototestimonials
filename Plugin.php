@@ -28,11 +28,14 @@ class Plugin extends PluginBase
 
     public function boot()
     {
+        TestimonialModel::extend(function($model) {
+            $model->attachOne['photo'] = ['System\Models\File'];
+        });
         TestimonialsController::extendFormFields(function($form, $model, $context) {
             if(! $model instanceof TestimonialModel)
                 return;
 
-            $model->attachOne['photo'] = ['System\Models\File'];
+            
 
             $form->addFields([
                 'photo' => [
